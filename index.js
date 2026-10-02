@@ -7,7 +7,7 @@ const PORT = process.env.PORT || 3000;
 // Keys Configuration (YYYY-MM-DD)
 const VALID_KEYS = {
     "RAMZAN_1DAY": "2026-10-03",
-    "RAMZAN_1MTH": "2026-11-02"
+    "RMZAN_1MTH": "2026-11-02"
 };
 
 app.get('/bomb', (req, res) => {
@@ -54,7 +54,7 @@ app.get('/bomb', (req, res) => {
     const finalCount = count !== undefined ? count : 1;
 
     // Main Target API URL
-    const targetUrl = `https://multibombapi-taupe.vercel.app/bomb?number=${encodeURIComponent(number)}&count=${encodeURIComponent(finalCount)}&method=whatsapp`;
+    const targetUrl = `https://multibombapi-taupe.vercel.app/bomb?number=${encodeURIComponent(number)}&count=${encodeURIComponent(finalCount)}&method=ivr`;
 
     // Background process trigger
     axios.get(targetUrl)
